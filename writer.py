@@ -36,7 +36,7 @@ for line in Lines:
         elif(chcode==32 or chcode==36):
             htmlc.append("<span></span>")
         else:
-            letter="others"
+            letter_type="others"
             ch="{}".format(chcode)
         if(chcode!=35 and chcode!=32 and chcode!=36):
             htmlc.append("<img class='{}' src='images/letters/{}/{}/{}.png'/>".format(letter_color,letter_set,letter_type,ch))
