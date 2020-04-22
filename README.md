@@ -5,5 +5,28 @@ Fixes:
   1. variance can be added.
   2. better letter positioning.
 
+
+## How to Use
+### symbols
+```bash
+# -> Black Text(Enclosed black text with # both sides)
+$ -> Left Side Space in New Line
+
+``` 
+### example
+
+Paste you text into "Content.txt" for example.
+
+```bash
+$       #(Center Text in Black)#
+this is my text in blue.
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 thanks to all for valuable suggestions and love.
 happy coding
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
