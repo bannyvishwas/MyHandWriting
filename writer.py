@@ -30,7 +30,7 @@ for line in Lines:
             ch=ch.lower()
         elif(chcode>=97 and chcode<=177):
             letter_type="small"
-        elif(chcode>=48 and chcode<=57):
+        elif(chcode>=46 and chcode<=63):
             letter_type="others"
             ch="{}".format(chcode)
         elif(chcode==32 or chcode==36):
