@@ -2,7 +2,7 @@
 import random
 textfile = open('content.txt', 'r')
 Lines = textfile.readlines()
-letter_color="clblue"
+letter_color="blue"
 letter_set="set0"
 trcolor=False
 letter_type=""
@@ -20,10 +20,10 @@ for line in Lines:
         #letter_set="set{}".format(random_letter)
         if(chcode==35):
             if(trcolor):
-                letter_color="clblue"
+                letter_color="blue"
                 trcolor=False
             else:
-                letter_color="clblack"
+                letter_color="black"
                 trcolor=True
         elif(chcode>=65 and chcode<=90):
             letter_type="caps"
@@ -39,7 +39,7 @@ for line in Lines:
             letter_type="others"
             ch="{}".format(chcode)
         if(chcode!=35 and chcode!=32 and chcode!=36):
-            htmlc.append("<img class='{}' src='images/letters/{}/{}/{}.png'/>".format(letter_color,letter_set,letter_type,ch))
+            htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(letter_set,letter_color,letter_type,ch))
     htmlc.append('</div>')
 textfile.close()
 htmlc.append('</div></body></html>')
