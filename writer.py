@@ -27,6 +27,7 @@ for line in Lines:
                 trcolor=True
         elif(chcode>=65 and chcode<=90):
             letter_type="caps"
+            ch=ch.lower()
         elif(chcode>=97 and chcode<=177):
             letter_type="small"
         elif(chcode>=48 and chcode<=57):
