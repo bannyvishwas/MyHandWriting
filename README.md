@@ -4,9 +4,13 @@ Full video of the approach will be online soon.
 Fixes:
   1. variance can be added.
   2. better letter positioning.
+  3. Loading Preview while printing fixed.
 
+## How it Works?
+[![Watch the video](https://img.youtube.com/vi/QJDcWYCmrqo/maxresdefault.jpg)](https://youtu.be/QJDcWYCmrqo)
 
 ## How to Use
+
 ### symbols
 ```bash
 # -> Black Text(Enclosed black text with # both sides)
