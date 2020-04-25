@@ -32,7 +32,7 @@ python3 writer.py
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/someone) – YourEmail@example.com
+Bug Boy – [@bugboy404](https://www.reddit.com/u/bugboy404) – banny.swan@gmail.com
 
 [https://github.com/bannyvishwas2020](https://github.com/bannyvishwas2020)
 
