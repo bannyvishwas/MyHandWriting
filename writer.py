@@ -5,6 +5,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Convert text to a handwritten page')
 parser.add_argument('--infile',
+                    '-i',
                     default='content.txt',
                     dest='inputfile',
                     help='path to input text file (defaults to ./content.txt',
@@ -25,6 +26,7 @@ parser.add_argument('--background',
                     help='Background texture for "paper"',
                     )
 parser.add_argument('--outfile',
+                    '-o',
                     default='page.html',
                     dest='outputfile',
                     help='path to input text file (defaults to ./content.txt',
