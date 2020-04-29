@@ -1,4 +1,0 @@
-plain text is by default in blue color
-#enclosing text between two hashes will make it black#
-$        having a dollar symbol doesn't strip leading white spaces
-$    #can also combine the dollar and hash to get indented text in black color#
