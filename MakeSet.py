@@ -107,7 +107,8 @@ def check_directory():
         os.mkdir(actdirectory+"/black")
     else:
         os.mkdir("images/letters")
-        actdirectory="images/letters"
+        actset=1
+        actdirectory="images/letters/set{}".format(actset)
         
 def create_letter():
     global actdirectory
