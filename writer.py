@@ -10,11 +10,6 @@ parser.add_argument('--infile',
                     dest='inputfile',
                     help='path to input text file (defaults to ./content.txt',
                     )
-parser.add_argument('--lettercolor',
-                    default='blue',
-                    dest='letter_color',
-                    help='Color of normal/default text',
-                    )
 parser.add_argument('--letterset',
                     default='set0',
                     dest='letter_set',
@@ -34,6 +29,7 @@ parser.add_argument('--outfile',
 args = parser.parse_args()
 
 trcolor = False
+letter_color = "blue"
 letter_type = ""
 
 htmlc = [
@@ -61,10 +57,10 @@ with open(args.inputfile, 'r') as textfile:
             # letter_set="set{}".format(random_letter)
             if(chcode == 35):
                 if(trcolor):
-                    args.letter_color = "blue"
+                    letter_color = "blue"
                     trcolor = False
                 else:
-                    args.letter_color = "black"
+                    letter_color = "black"
                     trcolor = True
             elif(chcode >= 65 and chcode <= 90):
                 letter_type = "caps"
@@ -81,7 +77,7 @@ with open(args.inputfile, 'r') as textfile:
                 ch = "{}".format(chcode)
             if(chcode != 35 and chcode != 32 and chcode != 36):
                 htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(
-                    args.letter_set, args.letter_color, letter_type, ch))
+                    args.letter_set, letter_color, letter_type, ch))
         htmlc.append('</div>')
 
 htmlc.append('</div></body></html>')
