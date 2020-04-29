@@ -15,11 +15,6 @@ parser.add_argument('--lettercolor',
                     dest='letter_color',
                     help='Color of normal/default text',
                     )
-parser.add_argument('--letterset',
-                    default='set0',
-                    dest='letter_set',
-                    help='Handwriting character set',
-                    )
 parser.add_argument('--background',
                     default='images/texture.png',
                     dest='bgimage',
@@ -35,7 +30,7 @@ args = parser.parse_args()
 
 trcolor = False
 letter_type = ""
-
+letter_set="set0"
 htmlc = [
     "<html><head><style>.lines{width:100%;height:auto;float:left;}"
     "#paper{background:white;"
@@ -81,7 +76,7 @@ with open(args.inputfile, 'r') as textfile:
                 ch = "{}".format(chcode)
             if(chcode != 35 and chcode != 32 and chcode != 36):
                 htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(
-                    args.letter_set, args.letter_color, letter_type, ch))
+                    letter_set, args.letter_color, letter_type, ch))
         htmlc.append('</div>')
 
 htmlc.append('</div></body></html>')
