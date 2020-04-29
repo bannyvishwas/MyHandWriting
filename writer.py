@@ -10,11 +10,7 @@ parser.add_argument('--infile',
                     dest='inputfile',
                     help='path to input text file (defaults to ./content.txt)',
                     )
-parser.add_argument('--letterset',
-                    default='set0',
-                    dest='letter_set',
-                    help='Handwriting character set',
-                    )
+
 parser.add_argument('--background',
                     default='images/texture.png',
                     dest='bgimage',
@@ -77,7 +73,7 @@ with open(args.inputfile, 'r') as textfile:
                 ch = "{}".format(chcode)
             if(chcode != 35 and chcode != 32 and chcode != 36):
                 htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(
-                    args.letter_set, letter_color, letter_type, ch))
+                    letter_set, letter_color, letter_type, ch))
         htmlc.append('</div>')
 
 htmlc.append('</div></body></html>')
