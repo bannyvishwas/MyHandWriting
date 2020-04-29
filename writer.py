@@ -20,7 +20,7 @@ parser.add_argument('--outfile',
                     '-o',
                     default='page.html',
                     dest='outputfile',
-                    help='path to input text file (defaults to ./content.txt',
+                    help='path to input text file (defaults to ./content.txt'),
                     )
 args = parser.parse_args()
 
