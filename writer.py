@@ -31,7 +31,7 @@ args = parser.parse_args()
 trcolor = False
 letter_color = "blue"
 letter_type = ""
-
+letter_set="set0"
 htmlc = [
     "<html><head><style>.lines{width:100%;height:auto;float:left;}"
     "#paper{background:white;"
@@ -77,7 +77,11 @@ with open(args.inputfile, 'r') as textfile:
                 ch = "{}".format(chcode)
             if(chcode != 35 and chcode != 32 and chcode != 36):
                 htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(
+<<<<<<< HEAD
                     args.letter_set, letter_color, letter_type, ch))
+=======
+                    letter_set, args.letter_color, letter_type, ch))
+>>>>>>> 084c2d2685c509d6dc947be73593a2d6f11791bc
         htmlc.append('</div>')
 
 htmlc.append('</div></body></html>')
