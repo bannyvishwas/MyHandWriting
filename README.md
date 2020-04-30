@@ -29,7 +29,7 @@ The entire code in written in pure python using only its builtin packages. So, t
 
 Run MakeSet.py to make your own letter sets.
 ```Python
-pythonw MakeSet.py
+python MakeSet.py
 ```
 Paste the below text into "content.txt" as an example.
 
@@ -43,7 +43,7 @@ $    #can also combine the dollar and hash to get indented text in black color#
 run the below command to generate page.html file that contains the generated handwritten text.
 
 ```Python
-pythonw writer.py
+python writer.py
 ```
 
 ## Meta
