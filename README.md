@@ -6,14 +6,31 @@
 
 Convert text to your own hand written text. Easy and time saving.
 
-[![Watch the video](https://img.youtube.com/vi/QJDcWYCmrqo/maxresdefault.jpg)](https://youtu.be/QJDcWYCmrqo)
+[![Watch the video](https://img.youtube.com/vi/n1GBJ7KPms8/maxresdefault.jpg)](https://youtu.be/n1GBJ7KPms8)
 
 ## Installation
-
+Install these two modules before executing.
+```bash
+pip install Pillow
+pip install pygame
+```
 The entire code in written in pure python using only its builtin packages. So, there is nothing to install (apart from python)
+
+## What's New
+```
+1. Create your own letter set using MakeSet.py
+2. Better GUI
+3. All symbols included
+4. No limit on letter sets
+
+```
 
 ## Usage example
 
+Run MakeSet.py to make your own letter sets.
+```Python
+pythonw MakeSet.py
+```
 Paste the below text into "content.txt" as an example.
 
 ```
