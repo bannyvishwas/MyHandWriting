@@ -5,11 +5,10 @@ import os
 letter_color = "blue"
 letter_set = "set0"
 trcolor = False
-letter_type = ""
 totalset=len(os.listdir("images/letters"))+1
 
 htmlc = [
-    "<html><head><style>.lines{width:100%;height:auto;float:left;}#paper{background:white;background-image:url('images/texture.png');height:auto;float:left;padding:50px 50px;width:90%;}img,span{height:25px;width:10px;float:left;margin-top:5px;margin-bottom:10px;}.clblack{filter:brightness(30%);}.clblue{filter:brightness(100%);}</style></head><body><div id='paper'>"]
+    "<html><head><style>.lines{width:100%;height:auto;float:left;}#paper{background:white;background-image:url('images/texture.png');height:auto;float:left;padding:50px 50px;width:90%;}img,span{height:25px;width:15px;float:left;margin-top:5px;margin-bottom:10px;}.clblack{filter:brightness(30%);}.clblue{filter:brightness(100%);}</style></head><body><div id='paper'>"]
 
 with open('content.txt', 'r') as textfile:
     for line in textfile:
@@ -31,20 +30,12 @@ with open('content.txt', 'r') as textfile:
                 else:
                     letter_color = "black"
                     trcolor = True
-            elif(chcode >= 65 and chcode <= 90):
-                letter_type = "caps"
-            elif(chcode >= 97 and chcode <= 177):
-                letter_type = "small"
-            elif(chcode >= 48 and chcode <= 57):
-                letter_type = "others"
             elif(chcode == 32 or chcode == 36):
                 htmlc.append("<span></span>")
-            else:
-                letter_type = "others"
                 
             if(chcode != 35 and chcode != 32 and chcode != 36):
-                htmlc.append("<img src='images/letters/{}/{}/{}/{}.png'/>".format(
-                    letter_set, letter_color, letter_type, chcode))
+                htmlc.append("<img src='images/letters/{}/{}/{}.png'/>".format(
+                    letter_set, letter_color, chcode))
         htmlc.append('</div>')
 
 htmlc.append('</div></body></html>')
