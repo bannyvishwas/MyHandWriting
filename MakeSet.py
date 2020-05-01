@@ -109,6 +109,9 @@ def check_directory():
         os.mkdir("images/letters")
         actset=1
         actdirectory="images/letters/set{}".format(actset)
+        os.mkdir(actdirectory)
+        os.mkdir(actdirectory+"/blue")
+        os.mkdir(actdirectory+"/black")
         
 def create_letter():
     global actdirectory
@@ -125,9 +128,12 @@ def create_letter():
     factor = 0.35
     im_output = enhancer.enhance(factor)
     im_output.save("{}/black/{}.png".format(actdirectory,letter))
-    
     letter_act_index+=1
-    dtxt="Draw --> {}".format(letterlist[letter_act_index])
+    if letter_act_index<87:
+        dtxt="Draw --> {}".format(letterlist[letter_act_index])
+    else:
+        dtxt="Set Done."
+        btn_reset()
 
 def reset_surface():
     pygame.draw.rect(screen, (255,255,255) , (10,10,200,300))
@@ -168,7 +174,11 @@ def mouse_clicked(x,y):
     global dtxt
     if(x>220 and y>65 and x<470 and y<100):
         btn_clicked(1)
-        create_letter()
+        if letter_act_index<87:
+            create_letter()
+        else:
+            dtxt="Set Done."
+            btn_reset()
         reset_surface()
         display_mess()
     elif(x>220 and y>110 and x<470 and y<145):
