@@ -10,7 +10,15 @@ Convert text to your own hand written text. Easy and time saving.
 
 ## Installation
 
-Install these two modules before executing.
+Either install from requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
+OR
+
+Install these two modules
 
 ```bash
 pip install Pillow
