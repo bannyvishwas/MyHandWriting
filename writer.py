@@ -14,6 +14,7 @@ parser.add_argument(
 
 parser.add_argument(
     "--background",
+    "-b",
     default="images/texture.png",
     dest="bgimage",
     help='Background texture for "paper"',
