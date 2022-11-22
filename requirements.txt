@@ -3,7 +3,7 @@ attrs==19.3.0
 black==19.10b0
 click==7.1.2
 pathspec==0.8.0
-Pillow==8.3.2
+Pillow==9.3.0
 pygame==1.9.6
 regex==2020.4.4
 toml==0.10.0
