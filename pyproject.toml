@@ -1,0 +1,36 @@
+[project]
+name = "myhandwriting"
+version = "2.0.0"
+description = "Text to handwriting converter - create and use custom handwritten character sets"
+authors = [
+    { name = "bannyvishwas" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.12"
+dependencies = [
+    "PyQt6>=6.7.0",
+    "fonttools>=4.60.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5.0",
+    "pyinstaller>=6.0.0",
+]
+
+[project.scripts]
+myhandwriting = "myhandwriting.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
